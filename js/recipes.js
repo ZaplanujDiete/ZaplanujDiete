@@ -1,5 +1,5 @@
 import { checkName } from "./saveName.js";
-if (!checkName) window.location.replace("/app.html");
+if (!checkName) window.location.replace("./app.html");
 const columnListRecipe = document.querySelector(".column__recipes__list");
 const addRecipeColumn = document.querySelector(".add__recipe__wrapper");
 const addRecipeButton = document.querySelector("#add__recipe");

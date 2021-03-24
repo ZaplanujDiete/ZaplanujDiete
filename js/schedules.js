@@ -1,5 +1,5 @@
 import { checkName } from "./saveName.js";
-if (!checkName) window.location.replace("/app.html");
+if (!checkName) window.location.replace("./app.html");
 const schedulesListColumn = document.querySelector(".column__schedules__list");
 const addScheduleColumn = document.querySelector(".column__schedules");
 const schedulesList = document.querySelector(".schedules__list__list");
