@@ -5,7 +5,7 @@
   box-sizing: border-box; }
 
 .hero {
-  background-image: url(../../assets/hero-image.jpg);
+  background-image: url(../assets/hero-image.jpg);
   background-position: center;
   min-height: 100vh; }
 
