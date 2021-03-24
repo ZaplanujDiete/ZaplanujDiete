@@ -1,0 +1,98 @@
+.column__recipes__list {
+    width: 90%;
+    min-height: 95%;
+    border: 3px solid $color-logo2;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px -2px rgba(0,0,0,0.4);
+    background-color: #fff;
+
+    .recipes__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+    }
+}
+.recipes__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.6);
+    color: $color-logo2;
+
+    i {
+        font-size: 2.25rem;
+    }
+}
+.recipe__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__title {
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+        margin: 15px 0;
+        border-top: 2px solid rgba(0, 0, 0, 0.6);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 15px 10px;
+        width: 95%;
+
+        & p {
+            width: 100%;
+        }
+        .recipe__list__title--order {
+            width: 30%;
+        }
+        &--action {
+            text-align: right;
+        }
+    }
+    &__list {
+        width: 95%;
+        list-style: none;
+        height: 50vh;
+        padding-right: 10px;
+        overflow: auto;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 15px 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+            
+
+            .order {
+                width: 10%;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            
+            .name {
+                width: 30%;
+                font-size: 1.2rem;
+            }
+
+            .description {
+                width: 50%;
+            }
+            .action {
+                width: 10%;
+                display: flex;
+                justify-content: flex-end;
+                gap: 5px;
+
+                i {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}

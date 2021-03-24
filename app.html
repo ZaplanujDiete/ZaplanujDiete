@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaplanuj Dietę</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu__app__container">
+            <div class="logo">
+                <i class="fas fa-bars hamburger__menu"></i>
+                <h2 class="logo__text"><a href="./index.html"> Zaplanuj<span>Dietę</span></a></h2>
+            </div>
+            <div class="user">
+                <span class="user__name"></span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <ul class="column__menu">
+            <li class="column__menu__element"><a href="./app.html">Pulpit</a></li>
+            <li class="column__menu__element"><a href="./recipes.html">Przepisy</a></li>
+            <li class="column__menu__element"><a href="./schedules.html">Plany</a></li>
+            <li class="column__menu__element"><a href="./shop.html">Lista Zakupów</a></li>
+        </ul>
+        <div class="column__desktop">
+            <div id="welcome" class="column__welcome">
+                <div class="column__welcome__wrapper">
+                    <h2>Witaj,</h2>
+                    <h3>wygląda na to że jesteś tutaj pierwszy raz</h3>
+                    <p class="error__info">Musisz wpisać imię, żeby przejść dalej</p>
+                    <input type="text" name="" id="get__name" placeholder="Tutaj wpisz swoje na imie" />
+                    <button type="submit" class="btn" id="submit__name">Gotowe!</button>
+                    <p class="add__name">Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)</p>
+                </div>
+            </div>
+            <div class="column__dashboard">
+                <div class="column__dashboard__wrapper">
+                    <div class="widgets__wrapper">
+                        <div class="widgets__wrapper__icons">
+                            <div class="widgets__wrapper__icons__add add__recipe">
+                                <i class="far fa-plus-square"></i>
+                                <p>dodaj przepis</p>
+                            </div>
+                            <div class="widgets__wrapper__icons__add add__plan">
+                                <i class="far fa-plus-square"></i>
+                                <p>dodaj plan</p>
+                            </div>
+                        </div>
+                        <div class="widgets__wrapper__notifications">
+                            <div class="notification notification__info">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Masz już <span class="amount__recipes"></span> przepisów, nieźle!</p>
+                                <i class="fas fa-window-close close__recipes__info"></i>
+                            </div>
+                            <div class="notification notification__warning">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <p>Pamiętaj, aby dodać plan!</p>
+                                <i class="fas fa-window-close close__plan__info"></i>
+                            </div>
+                            <div class="notification notification__success">
+                                <i class="fas fa-check-circle"></i>
+                                <p>Świetnie że jesteś! Udanego planowania i smacznego! :)</p>
+                                <i class="fas fa-window-close close__thanks__info"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__wrapper">
+                        <table class="table">
+                            <div class="number__week">
+                                <p class="number__week__text">
+                                    Twój plan na <span class="number__plan"></span> tydzień:
+                                </p>
+                            </div>
+                            <thead class="table__title">
+                                <tr class="tible__title__row">
+                                    <th>Poniedziałek</th>
+                                    <th>Wtorek</th>
+                                    <th>Środa</th>
+                                    <th>Czwartek</th>
+                                    <th>Piątek</th>
+                                    <th>Sobota</th>
+                                    <th>Niedziela</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="meal__title">
+                                        Śniadania
+                                    </th>
+                                    <td>
+                                        <span>Poniedziałek</span>
+                                        <p class="breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Wtorek</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Środa</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Czwartek</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Piątek</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Sobota</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Niedziela</span>
+                                        <p class="breakfast">Przepis</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="meal__title">
+                                        Drugie śniadania
+                                    </th>
+                                    <td>
+                                        <span>Poniedziałek</span>
+                                        <p class="second__breakfast">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Wtorek</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Środa</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Czwartek</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Piątek</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Sobota</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Niedziela</span>
+                                        <p class="second__breakfast">Przepis</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="meal__title">
+                                        Zupy
+                                    </th>
+                                    <td>
+                                        <span>Poniedziałek</span>
+                                        <p class="soup">PrzepisPrzepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Wtorek</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Środa</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Czwartek</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Piątek</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Sobota</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Niedziela</span>
+                                        <p class="soup">Przepis</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="meal__title">
+                                        Obiady
+                                    </th>
+                                    <td>
+                                        <span>Poniedziałek</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Wtorek</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Środa</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Czwartek</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Piątek</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Sobota</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Niedziela</span>
+                                        <p class="dinner">Przepis</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="meal__title">
+                                        Kolacje
+                                    </th>
+                                    <td>
+                                        <span>Poniedziałek</span>
+                                        <p class="supper">Przepis</p>
+                                    </td>
+                                    <td>
+                                        <span>Wtorek</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Środa</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Czwartek</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Piątek</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Sobota</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                    <td>
+                                        <span>Niedziela</span>
+                                        <p class="supper">Przepis</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="switch__table">
+                            <div class="switch__prev">
+                                <p class="prev">
+                                    <i class="fas fa-angle-double-left"></i> <span>poprzedni</span>
+                                </p>
+                            </div>
+                            <div class="switch__next">
+                                <p class="next">
+                                    następny <i class="fas fa-angle-double-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/saveName.js" type="module"></script>
+    <script src="./js/dashboard.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaplanuj Dietę</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu__app__container">
+            <div class="logo">
+                <i class="fas fa-bars hamburger__menu"></i>
+                <h2 class="logo__text"><a href="./index.html"> Zaplanuj<span>Dietę</span></a></h2>
+            </div>
+            <div class="user">
+                <span class="user__name"></span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <ul class="column__menu">
+            <li class="column__menu__element"><a href="./app.html">Pulpit</a></li>
+            <li class="column__menu__element"><a href="./recipes.html">Przepisy</a></li>
+            <li class="column__menu__element"><a href="./schedules.html">Plany</a></li>
+            <li class="column__menu__element"><a href="./shop.html">Lista Zakupów</a></li>
+        </ul>
+        <div class="column__desktop">
+            <div class="column__recipes__list">
+                <div class="recipes__wrapper">
+                    <div class="recipes__title">
+                        <h2>Lista Przepisów</h2>
+                        <i id="add__recipe" class="fas fa-plus-square"></i>
+                    </div>
+                    <div class="recipe__list">
+                        <div class="recipe__list__title">
+                            <p class="recipe__list__title--order">
+                                Id
+                            </p>
+                            <p class="recipe__list__title--name">
+                                Nazwa
+                            </p>
+                            <p class="recipe__list__title--desc">
+                                Opis
+                            </p>
+                            <p class="recipe__list__title--action">
+                                Akcje
+                            </p>
+                        </div>
+                        <ol class="recipe__list__list">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div style="display: none;" class="add__recipe__wrapper">
+                <div class="add__recipe__title">
+                    <div class="add__title">Nowy przepis</div>
+                    <button class="add__recipe__button" data-save-recipe-btn>Zapisz i zamknij</button>
+                    <button style="display: none;" class="add__recipe__button save__button">Zapisz i zamknij</button>
+                </div>
+                <div class="add__recipe">
+                    <div class="add__recipe__name">
+                        <div class="add__recipe__name__text">Nazwa przepisu</div>
+                        <input type="text" class="add__recipe__name__input"></input>
+                    </div>
+                    <div class="add__recipe__desc">
+                        <div class="add__recipe__desc__text">Opis przepisu</div>
+                        <textarea class="add__recipe__desc__input"></textarea>
+                    </div>
+                    <div class="add__recipe__area">
+                        <div class="instructions">
+                            <div class="instructions__title">Instrukcje</div>
+                            <p class="error__instruction hide">Instruckja nie może być pusta</p>
+                            <div class="instructions__text">
+                                <textarea name="add_instr_txt" class="instructions__text__input"></textarea>
+                                <i class="fas fa-plus-square instructions__text__btn"></i>
+                            </div>
+                            <div class="instructions__list">
+                                <ol start="1" class="instructions__list__steps">
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="ingredients">
+                            <div class="ingredients__title">Składniki</div>
+                            <p class="error__ingredient hide">Musisz dodać składnik :)</p>
+                            <div class="ingredients__text">
+                                <textarea class="ingredients__text__input"></textarea>
+                                <i class="fas fa-plus-square ingredients__text__btn"></i>
+                            </div>
+                            <div class="ingredients__list">
+                                <ul class="ingredients__list__steps">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/recipes.js" type="module"></script>
+</body>
+
+</html>

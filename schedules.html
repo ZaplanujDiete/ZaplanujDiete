@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaplanuj Dietę</title>
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="menu__app__container">
+            <div class="logo">
+                <i class="fas fa-bars hamburger__menu"></i>
+                <h2 class="logo__text"><a href="./index.html"> Zaplanuj<span>Dietę</span></a></h2>
+            </div>
+            <div class="user">
+                <span class="user__name"></span>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <ul class="column__menu">
+            <li class="column__menu__element"><a href="./app.html">Pulpit</a></li>
+            <li class="column__menu__element"><a href="./recipes.html">Przepisy</a></li>
+            <li class="column__menu__element"><a href="./schedules.html">Plany</a></li>
+            <li class="column__menu__element"><a href="./shop.html">Lista Zakupów</a></li>
+        </ul>
+        <div class="column__desktop">
+            <div class="column__schedules__list">
+                <div class="column__schedules__list__wrapper">
+                    <div class="schedules__title">
+                        <h2>Lista Planów</h2>
+                        <i id="add__shedule__button" class="fas fa-plus-square"></i>
+                    </div>
+                    <div class="schedules__list">
+                        <div class="schedules__list__title">
+                            <p class="schedules__list__title--order">
+                                Id
+                            </p>
+                            <p class="schedules__list__title--name">
+                                Nazwa
+                            </p>
+                            <p class="schedules__list__title--desc">
+                                Opis
+                            </p>
+                            <p class="schedules__list__title--week">
+                                Tydz
+                            </p>
+                            <p class="schedules__list__title--action">
+                                Akcje
+                            </p>
+                        </div>
+                        <ol class="schedules__list__list">
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div style="display: none;" class="column__schedules">
+                <div class="column__schedules__wrapper">
+                    <div class="add__schedule">
+                        <div class="add__schedule__title">
+                            <div class="add__title">Nowy plan</div>
+                            <button class="add__schedule__button">Zapisz i zamknij</button>
+                            <button style="display: none;" class="add__schedule__button save__button">Zapisz i
+                                zamknij</button>
+                        </div>
+                        <div class="add__schedule__name">
+                            <div class="add__schedule__name__text">Nazwa planu</div>
+                            <input type="text" class="add__schedule__name__input"></input>
+                        </div>
+                        <div class="add__schedule__desc">
+                            <div class="add__schedule__desc__text">Opis planu</div>
+                            <textarea class="add__schedule__desc__input"></textarea>
+                        </div>
+                        <div class="add__schedule__week">
+                            <div class="add__schedule__week__text">Numer tygodnia</div>
+                            <input class="add__schedule__week__input" type="number" name="number-of-week"
+                                id="number-of-week">
+                        </div>
+                    </div>
+                    <div class="table__wrapper">
+                        <table class="table">
+                            <thead class="table__title">
+                                <tr class="table__title__row">
+                                    <th></th>
+                                    <th>Śniadanie</th>
+                                    <th>Drugie śniadanie</th>
+                                    <th>Zupa</th>
+                                    <th>Drugie danie</th>
+                                    <th>Kolacja</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Poniedziałek</p>
+                                    </th>
+                                    <td class="monday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="monday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="monday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="monday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="monday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Wtorek</p>
+                                    </th>
+                                    <td class="tuesday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="tuesday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="tuesday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="tuesday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="tuesday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Środa</p>
+                                    </th>
+                                    <td class="wednesday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="wednesday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="wednesday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="wednesday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="wednesday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Czwartek</p>
+                                    </th>
+                                    <td class="thursday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="thursday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="thursday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="thursday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="thursday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Piątek</p>
+                                    </th>
+                                    <td class="friday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="friday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="friday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="friday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="friday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Sobota</p>
+                                    </th>
+                                    <td class="saturday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="saturday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="saturday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="saturday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="saturday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="day__title">
+                                        <p>Niedziela</p>
+                                    </th>
+                                    <td class="sunday__cell">
+                                        <span>Śniadanie</span>
+                                        <select class="meal breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="sunday__cell">
+                                        <span>Drugie śniadanie</span>
+                                        <select class="meal second__breakfasts" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="sunday__cell">
+                                        <span>Zupa</span>
+                                        <select class="meal soups" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="sunday__cell">
+                                        <span>Drugie danie</span>
+                                        <select class="meal dinners" id="">
+
+                                        </select>
+                                    </td>
+                                    <td class="sunday__cell">
+                                        <span>Kolacja</span>
+                                        <select class="meal suppers" id="">
+
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/schedules.js" type="module"></script>
+</body>
+
+</html>
