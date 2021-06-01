@@ -50,10 +50,10 @@ class Dashboard {
             this.loadDashboard();
         })
         addPlan.addEventListener('click', () => {
-            window.location.replace("/schedules.html");
+            window.location.replace("../schedules.html");
         })
         addRecipe.addEventListener('click', () => {
-            window.location.replace("/recipes.html");
+            window.location.replace("../recipes.html");
         })
 
         this.notificationsWrapper.addEventListener('click', (e) => {
